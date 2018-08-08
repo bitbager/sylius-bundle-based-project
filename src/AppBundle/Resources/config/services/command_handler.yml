@@ -1,0 +1,14 @@
+services:
+    app.command_handler.add_variant_to_cart:
+        class: AppBundle\CommandHandler\AddVariantToCartCommandHandler
+        arguments:
+            - "@sylius.factory.order_item"
+            - "@doctrine.orm.entity_manager"
+
+    app.command_handler.add_options_to_cart:
+        class: AppBundle\CommandHandler\AddOptionsToCartCommandHandler
+        arguments:
+            - "@sylius.factory.product_variant"
+            - "@sylius.factory.order_item"
+            - "@doctrine.orm.entity_manager"
+            - "@sylius.repository.product_variant"

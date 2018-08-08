@@ -1,0 +1,124 @@
+sylius_fixtures:
+    suites:
+        default:
+            listeners:
+                logger: ~
+                orm_purger: ~
+
+            fixtures:
+                app_product_option:
+                    options:
+                        custom:
+                            -
+                                code: side
+                                name: "Side"
+                                values:
+                                    left: "Left"
+                                    right: "Right"
+
+                            -
+                                code: radius
+                                name: "Radius"
+                                values:
+                                     r_850: "8.50"
+
+                            -
+                                code: power
+                                name: "Power"
+                                values: 
+                                    p_900: "-9.00"
+                                    p_850: "-8.50"
+                                    p_800: "-8.00"
+                                    p_750: "-7.50"
+                                    p_700: "-7.00"
+                                    p_650: "-6.50"
+                                    p_600: "-6.00"
+                                    p_675: "-5.75"
+                                    p_550: "-5.50"
+                                    p_525: "-5.25"
+                                    p_500: "-5.00"
+                                    p_475: "-4.75"
+                                    p_450: "-4.50"
+                                    p_425: "-4.25"
+                                    p_400: "-4.00"
+                                    p_375: "-3.75"
+                                    p_350: "-3.50"
+                                    p_325: "-3.25"
+                                    p_300: "-3.00"
+                                    p_275: "-2.75"
+                                    p_250: "-2.50"
+                                    p_225: "-2.25"
+                                    p_200: "-2.00"
+                                    p_175: "-1.75"
+                                    p_150: "-1.50"
+                                    p_125: "-1.25"
+                                    p_100: "-1.00"
+                                    p_075: "-0.75"
+                                    p_050: "-0.50"
+                                    p_025: "-0.25"
+                                    p_000: "0.00"
+
+                            -
+                                code: cylinder
+                                name: "Cylinder"
+                                values:
+                                    c_175: "-1.75"
+                                    c_125: "-1.25"
+                                    c_075: "-0.75"
+
+                            -
+                                code: axes
+                                name: "Axes"
+                                values: 
+                                    a_10: 10
+                                    a_20: 20
+                                    a_30: 30
+                                    a_40: 40
+                                    a_50: 50
+                                    a_60: 60
+                                    a_70: 70
+                                    a_80: 80
+                                    a_90: 90
+                                    a_100: 100
+                                    a_110: 110
+                                    a_120: 120
+                                    a_130: 130
+                                    a_140: 140
+                                    a_150: 150
+                                    a_160: 160
+                                    a_170: 170 
+                                    a_180: 180
+
+                            -
+                                code: packages
+                                name: "Packages"
+                                values:
+                                    pcg_1: 1
+                                    pcg_2: 2
+                                    pcg_3: 3
+                                    pcg_4: 4
+                                    pcg_5: 5
+                                    pcg_6: 6
+                                    pcg_7: 7
+                                    pcg_8: 8
+                                    pcg_9: 9
+                                    pcg_10: 10
+
+
+
+                app_product:
+                    options:
+                        custom:
+                            -
+                                code: ray_ban_glasses
+                                ean: "501234567890"
+                                type: simple
+                                name: "RayBan glasses"
+                                options: [packages]
+
+                            -
+                                code: contact_pad
+                                ean: "9012345678909"
+                                type: made_to_order
+                                name: "Best contact pads"
+                                options: [side, radius, power, cylinder, axes, packages]

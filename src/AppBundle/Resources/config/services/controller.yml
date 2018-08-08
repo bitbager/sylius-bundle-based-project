@@ -1,0 +1,16 @@
+services:
+    app.controller.action.add_variant_to_cart:
+        class: AppBundle\Controller\Action\AddVariantToCartAction
+        arguments:
+            - "@sylius.context.cart"
+            - "@sylius.repository.product"
+            - "@form.factory"
+            - "@app.command_handler.add_variant_to_cart"
+
+    app.controller.action.add_options_to_cart:
+        class: AppBundle\Controller\Action\AddOptionsToCartAction
+        arguments:
+            - "@sylius.context.cart"
+            - "@sylius.repository.product"
+            - "@form.factory"
+            - "@app.command_handler.add_options_to_cart"

@@ -1,0 +1,16 @@
+imports:
+    - { resource: services/fixture.yml }
+    - { resource: services/factory.yml }
+    - { resource: services/generator.yml }
+    - { resource: services/form.yml }
+    - { resource: services/controller.yml }
+    - { resource: services/command_handler.yml }
+
+services:
+    app.context.locale:
+        class: Sylius\Component\Locale\Context\ImmutableLocaleContext
+        public: false
+        arguments:
+            - "%locale%"
+        tags:
+            - { name: sylius.context.locale }

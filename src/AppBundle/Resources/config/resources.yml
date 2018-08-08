@@ -1,0 +1,3 @@
+imports:
+    - { resource: resource/product.yml }
+    - { resource: resource/order_item.yml }

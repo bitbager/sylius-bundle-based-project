@@ -1,0 +1,7 @@
+services:
+    app.factory.order_item:
+        class: AppBundle\Factory\OrderItemFactory
+        decorates: sylius.factory.order_item
+        public: false
+        arguments:
+            - "@app.generator.order_item_metadata"

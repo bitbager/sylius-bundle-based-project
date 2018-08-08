@@ -1,0 +1,23 @@
+services:
+    app.fixture.product_option:
+        class: AppBundle\Fixture\ProductOptionFixture
+        arguments:
+            - "@sylius.factory.product_option"
+            - "@sylius.factory.product_option_value"
+            - "@sylius.context.locale"
+            - "@doctrine.orm.entity_manager"
+        tags:
+            - { name: sylius_fixtures.fixture }
+
+    app.fixture.product:
+        class: AppBundle\Fixture\ProductFixture
+        arguments:
+            - "@sylius.context.locale"
+            - "@sylius.factory.product"
+            - "@sylius.factory.product_variant"
+            - "@sylius.generator.slug"
+            - "@sylius.repository.product_option"
+            - "@sylius.generator.product_variant"
+            - "@doctrine.orm.entity_manager"
+        tags:
+            - { name: sylius_fixtures.fixture }

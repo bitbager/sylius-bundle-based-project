@@ -1,0 +1,19 @@
+winzou_state_machine:
+    app_order_checkout:
+        class: "%sylius.model.order.class%"
+        property_path: state
+        graph: app_order_checkout
+        state_machine_class: "%sylius.state_machine.class%"
+        states:
+            cart: ~
+            completed: ~
+        transitions:
+            cart:
+                from: [cart]
+                to: completed
+        callbacks:
+            after:
+                app_process_order:
+                    on: ["completed"]
+                    do: ["@app.mailer.send_order_email", "send"]
+                    args: ["object"]

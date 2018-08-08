@@ -1,0 +1,15 @@
+services:
+    app.form.type.add_variant_to_cart:
+        class: AppBundle\Form\Type\AddVariantToCartType
+        tags:
+            - { name: form.type }
+
+    app.form.type.product_variant_choice:
+        class: AppBundle\Form\Type\ProductVariantChoiceType
+        tags:
+            - { name: form.type }
+
+    app.form.type.product_option_choice:
+        class: AppBundle\Form\Type\OptionValueChoiceType
+        tags:
+            - { name: form.type }

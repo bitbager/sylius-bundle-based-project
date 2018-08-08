@@ -1,0 +1,11 @@
+services:
+    app.generator.product_variant:
+        class: AppBundle\Generator\ProductVariantGenerator
+        decorates: sylius.generator.product_variant
+        public: false
+        arguments:
+            - "@sylius.factory.product_variant"
+            - "@sylius.checker.product_variants_parity"
+
+    app.generator.order_item_metadata:
+        class: AppBundle\Generator\OrderItemMetadataGenerator

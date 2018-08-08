@@ -1,0 +1,21 @@
+app_order:
+    resource: |
+        alias: sylius.order
+        serialization_version: $version
+        criteria:
+            id: $id
+    type: sylius.resource_api
+
+app_add_variant_to_cart:
+    path: /add-variant-to-cart/{productCode}
+    methods: ['POST']
+    controller: app.controller.action.add_variant_to_cart
+    defaults:
+        _format: json
+
+app_add_options_to_cart:
+    path: /add-options-to-cart/{productCode}
+    methods: ['POST']
+    controller: app.controller.action.add_options_to_cart
+    defaults:
+        _format: json

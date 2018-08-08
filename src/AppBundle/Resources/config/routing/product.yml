@@ -1,0 +1,8 @@
+app_api_product:
+    resource: |
+        identifier: code
+        alias: sylius.product
+        form: Sylius\Bundle\ProductBundle\Form\Type\ProductType
+        criteria:
+            code: $code
+    type: sylius.resource_api

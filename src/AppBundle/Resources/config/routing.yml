@@ -1,0 +1,5 @@
+product:
+    resource: routing/product.yml
+
+order:
+    resource: routing/order.yml
